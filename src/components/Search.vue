@@ -5,7 +5,7 @@
         <div class="search__inner">
           <div class="search__col">
             <textfield
-              label="Nombre" name="name" placeholder="Morty" v-model="searchName" />
+              label="Nombre" name="name" placeholder="Ej. Morty" v-model="searchName" />
           </div>
           <div class="search__col">
             <select-ui
@@ -106,7 +106,11 @@ export default {
 
   &__col {
     padding: 0 4px;
-    min-width: 200px;
+    min-width: 100%;
+
+    @media (min-width: 768px) {
+      min-width: 200px;
+    }
 
     .textfield,
     .select-ui {
