@@ -87,12 +87,15 @@ export default {
 <style lang="scss">
 .search {
   margin-top: 32px;
-  padding: 20px 16px;
+  padding: 12px 16px;
   background-color: white;
   margin-bottom: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
 
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     margin: 0 -4px;
 
@@ -104,6 +107,11 @@ export default {
   &__col {
     padding: 0 4px;
     min-width: 200px;
+
+    .textfield,
+    .select-ui {
+      margin: 8px 0;
+    }
   }
 
   &__button {
@@ -119,6 +127,7 @@ export default {
     border-radius: 8px;
     transition: all 0.25s ease-out;
     cursor: pointer;
+    margin: 8px 0;
 
     &:hover {
       color: #4a5568;
