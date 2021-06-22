@@ -7,13 +7,20 @@
       <h3 class="character__title">
         {{character.name}}
       </h3>
-      <p>Estado: <b>{{ character.status }}</b></p>
-      <p>Género: <b>{{ character.gender }}</b></p>
-      <p>Tipo: <b>{{ character.type }}</b></p>
-      <p>Especie: <b>{{ character.species }}</b></p>
-      <p>Origen: <b>{{ character.origin.name }}</b></p>
-      <p>Visto por ultima vez: <b>{{ character.location.name }}</b></p>
-      <p>Aparece en <b>{{ character.episode.length }} episodios</b></p>
+      <div style="display: flex">
+        <div>
+          <img :src="character.image" :alt="character.name">
+        </div>
+        <div style="padding: 0 16px; margin: -16px 0">
+          <p>Estado: <b>{{ character.status }}</b></p>
+          <p>Género: <b>{{ character.gender }}</b></p>
+          <p>Tipo: <b>{{ character.type }}</b></p>
+          <p>Especie: <b>{{ character.species }}</b></p>
+          <p>Origen: <b>{{ character.origin.name }}</b></p>
+          <p>Visto por ultima vez: <b>{{ character.location.name }}</b></p>
+          <p>Aparece en <b>{{ character.episode.length }} episodios</b></p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -60,6 +67,7 @@ export default {
   &__title {
     font-size: 32px;
     margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 </style>
